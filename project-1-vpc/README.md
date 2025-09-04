@@ -37,8 +37,9 @@ I chose this project to **build a strong foundation in AWS networking**.
 It gave me hands-on experience in **network design, security, and connectivity**, which will be essential for the upcoming projects in this series.
 
 ## 📂 Project Files
-- Documentation: [`steps.md`](docs/steps.md.pdf)  
+- Documentation: [`steps.md`](docs/steps.pdf)  
 - Screenshots are in the `screenshots` folder.  
+
 
 
 
