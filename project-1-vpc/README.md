@@ -1,52 +1,41 @@
-# NextWork AWS Networking Project 2 – VPC Traffic Flow and Security
+# NextWork AWS Networking Project 1 – Build a VPC
 
 ## ✅ Project Overview
-In this project, I learned to **configure VPC traffic flow and security**.  
-I created **route tables**, made a subnet public, set up **Security Groups** and **Network ACLs**, and verified the setup using a public subnet.
+In this project, I learned to **create a Virtual Private Cloud (VPC)** and connect it to the internet.  
+I divided the VPC into **subnets** and then attached an **internet gateway** so resources inside the VPC could communicate with the outside world.
 
-![Step 1: Route Table Settings](screenshots/route-table.png)
+![Step 1: VPC Settings](screenshots/vpc-settings.png)
 
 ## 🛠 Key Services and Concepts
 - **Amazon VPC** – Isolating resources inside a private virtual network.  
-- **Subnets** – Dividing the VPC into public and private sections.  
-- **Route Tables** – Directing traffic inside the VPC and to the internet.  
-- **Security Groups** – Resource-level firewall controlling inbound/outbound traffic.  
-- **Network ACLs (NACLs)** – Subnet-level traffic control for extra security.  
-- **Internet Gateway** – Connecting public subnet resources to the internet.  
+- **Subnets** – Dividing the VPC into smaller sections (public vs private).  
+- **CIDR Blocks** – Defining the IP address ranges for VPCs and subnets.  
+- **Internet Gateway** – Allowing communication between the VPC and the internet.  
+- **Availability Zones** – Placing resources across multiple AZs for reliability.  
 
-![Step 2: Security Group Settings](screenshots/security-group.png)
+![Step 2: Subnet Settings](screenshots/subnet-settings.png)
 
 ## 🔧 Steps Completed
-1. **Created a route table** for the public subnet.  
-   - New route destination: `0.0.0.0/0`  
-   - Target: Internet Gateway (NextWork IG)  
+1. **Created a VPC** with a CIDR block to define its private IP range.  
+2. **Created a subnet** inside the VPC, linked to a specific Availability Zone.  
+3. **Attached an Internet Gateway** to the VPC to enable internet access.  
 
-2. **Created a security group** for controlling traffic to resources.  
-   - Inbound rule: HTTP from Anywhere (0.0.0.0/0)  
-   - Outbound rules: All traffic allowed by default  
-
-3. **Created a custom Network ACL** and associated it with the public subnet.  
-   - Inbound and Outbound rule: Allow all traffic (Rule 100)  
-
-![Step 3: Network ACL Settings](screenshots/network-acl.png)
+![Step 3: Internet Gateway](screenshots/internet-gateway.png)
 
 ## 📌 Key Learnings
-- How **route tables** control traffic flow within VPC and to the internet.  
-- The difference between **Security Groups** (resource-level) and **Network ACLs** (subnet-level).  
-- How **public subnets** communicate with the internet through an Internet Gateway.  
-- Understanding inbound and outbound rules for both security groups and NACLs.  
+- Why **VPCs are essential** for secure and organized cloud networking.  
+- How **subnets** help separate resources by purpose (public vs private).  
+- How an **internet gateway** connects private AWS resources to the internet.  
+- The role of **Availability Zones** in improving reliability.  
 
 ## ⏱ Time Taken
-This project took approximately **2 hours**.  
-The most challenging part was **understanding route table and NACL logic**, and the most rewarding part was **seeing the subnet become public and accessible via HTTP**.
+This project took approximately **1 hour**.  
+The most challenging part was **understanding CIDR blocks**, and the most rewarding part was **seeing the VPC fully connected to the internet**.
 
 ## 💡 Reflection
-I chose this project to **strengthen my AWS networking skills**.  
-It gave me hands-on experience in **traffic management, subnet security, and access control**, which is essential for hosting applications securely in AWS.
+I chose this project to **build a strong foundation in AWS networking**.  
+It gave me hands-on experience in **network design, security, and connectivity**, which will be essential for the upcoming projects in this series.
 
 ## 📂 Project Files
-- Documentation: [`docs/steps-guide.pdf`](docs/steps-guide.pdf)  
-- Screenshots are in the `screenshots` folder:
-  - `security-group.png`  
-  - `route-table.png`  
-  - `network-acl.png`
+- Documentation: [`steps.md`](docs/steps.md)  
+- Screenshots are in the `screenshots` folder.  
